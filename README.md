@@ -1,2 +1,1 @@
-# CursoDjango
-Proyecto Ejemplo Laboratorio
+# CursosDjango
