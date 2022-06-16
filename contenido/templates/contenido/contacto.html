@@ -1,19 +1,29 @@
 {% extends "contenido/encabezado.html"%}
 {%block titulo%}Contacto{% endblock %}
-{% block contenido%}
+{% load static %}
 
-<h2>Formulario para solicitar información sobre algun curso.</h2>
-<p>Nombre: <input type="text" name="nombre"></p>
-<p>Correo: <input type="email" id="email"></p>
-<select name="curso" id="curso">
-<option value="">Seleccione un curso</option>
-<option value="1">Base de datos</option>
-<option value="2">Programación</option>
-<option value="3">Inglés</option>
-<option value="4">Matemáticas</option>
-</select>
-<p>Comentarios:</p>
-<p><textarea cols="30" rows="10"></textarea></p>
-<p><input type="Button" name="enviar" value="Enviar"/></p>
+{%block imagen%}
+{%load static%}
+{%static 'contenido/images/form.ico'%}
+{% endblock %}
+
+{% block contenido%}
+<section class="home">
+    <div class="text"><h1>Formulario para solicitar información sobre algún curso.</h1>
+    <hr>
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Correo: <input type="email" id="email"></p>
+    <select name="curso" id="curso">
+    <option value="">Seleccione un curso</option>
+    <option value="1">Base de datos</option>
+    <option value="2">Programación</option>
+    <option value="3">Inglés</option>
+    <option value="4">Matemáticas</option>
+    </select>
+    <p>Comentarios:</p>
+    <p><textarea cols="30" rows="10"></textarea></p>
+    <p><input type="Button" name="enviar" value="Enviar"/></p>
+</section>
+
 
 {%endblock%}

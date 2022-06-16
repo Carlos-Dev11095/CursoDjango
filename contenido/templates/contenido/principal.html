@@ -1,11 +1,18 @@
 {% extends "contenido/encabezado.html"%}
-
 {%block titulo%} Principal {% endblock %}
+{% load static %}
+
+{%block imagen%}
+{%load static%}
+{%static 'contenido/images/home.png'%}
+{% endblock %}
+
 
 {% block contenido%}
-
-<h1>BIENVENIDO ALUMNO A NUESTRA PÁGINA WEB</h1>
-<hr>
-<h2>En esta página podrás ver los cursos disponibles para ti
+<section class="home">
+    <div class="text"><h1>Bienvenido a Nuestra Página Web</h1>
+    <hr>
+<h3>En esta página podrás ver los cursos disponibles para ti</h3></div>
+</section>
 
 {%endblock%}

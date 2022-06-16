@@ -1,6 +1,23 @@
+{% extends "contenido/encabezado.html"%}
+{%block titulo%} Principal {% endblock %}
+{% load static %}
+
+{%block imagen%}
+{% load static %}
+{%static 'contenido/css/style.css'%}
+{%static 'contenido/images/logo.png'%}
+{% endblock %}
+
+
+{% block contenido %} <!--Template Tag-->
+
+    <!--block sirve para indicar que colocaremos un bloque de
+    contenido a través de nuestra variable content -->
+    
+
 <!-- Coding by CodingLab | www.codinglabweb.com -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,22 +29,13 @@
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
-    
-    <title>{%block titulo%}Ejemplo{% endblock %}</title>
-
-    {%load static%}
-    <link href="{% static 'contenido/css/style.css'%}" rel="stylesheet" type="text/css">
-    <script src="{% static 'contenido/js/script.js'%}"></script>
-    
-    <script src="script.js"></script>
-     
 </head>
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="{%block imagen%} {%endblock%}" alt="">
+                    <img src="{%static 'contenido/images/logo.png'%}" alt="My image">
                 </span>
 
                 <div class="text logo-text">
@@ -49,21 +57,21 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="{%url 'Principal'%}">
+                        <a href="#">
                             <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Inicio</span>
+                            <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="{%url 'Cursos'%}">
+                        <a href="#">
                             <i class='bx bx-bar-chart-alt-2 icon' ></i>
                             <span class="text nav-text">Revenue</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="{%url 'Contacto'%}">
+                        <a href="#">
                             <i class='bx bx-bell icon'></i>
                             <span class="text nav-text">Notifications</span>
                         </a>
@@ -117,12 +125,12 @@
         </div>
 
     </nav>
-    {% block contenido %} <!--Template Tag-->
-
-    <!--block sirve para indicar que colocaremos un bloque de
-    contenido a través de nuestra variable content -->
     
-
+    <section class="home">
+        <div class="text"><h1>BIENVENIDO ALUMNO A NUESTRA PÁGINA WEB</h1>
+        <hr>
+    <h2>En esta página podrás ver los cursos disponibles para ti</div>
+    </section>
     
 {% endblock %}
 </body>

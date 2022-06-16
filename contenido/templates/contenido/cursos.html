@@ -1,16 +1,25 @@
 {% extends "contenido/encabezado.html"%}
-{%block titulo%}Cursos{% endblock %}
-{% block contenido%}
+{%block titulo%} Principal {% endblock %}
+{% load static %}
 
-<h1>MATERIAS
+{%block imagen%}
+{%load static%}
+{%static 'contenido/images/cursos.png'%}
+{% endblock %}
+
+{% block contenido%}
+<section class="home">
+    <div class="text"><h1>Las materias disponibles son: </h1>
     <hr>
-</h1>
-<h2>Las materias disponibles son: </h2>
-<ul>
-    <li>Base de datos</li>
-    <li>Programación</li>
-    <li>Inglés</li>
-    <li>Matemáticas</li>
-</ul>
+
+    <ul>
+        <li>Base de datos</li>
+        <li>Programación</li>
+        <li>Inglés</li>
+        <li>Matemáticas</li>
+    </ul>
+</div>
+</section>
+
 
 {%endblock%}
