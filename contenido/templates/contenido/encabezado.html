@@ -18,6 +18,7 @@
     {%load static%}
     <link href="{% static 'contenido/css/style.css'%}" rel="stylesheet" type="text/css">
     
+    
 
 
 </head>
@@ -30,7 +31,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">Carlos Rodríguez</span>
+                    <span class="name">{%block titulomenu%}{%endblock%} </span>
                     <span class="profession">CursoDjango</span>
                 </div>
             </div>
@@ -57,7 +58,7 @@
                     <li class="nav-link">
                         <a href="{%url 'Cursos'%}">
                             <i class='bx bx-book icon' ></i>
-                            <span class="text nav-text">Materias</span>
+                            <span class="text nav-text">Cursos</span>
                         </a>
                     </li>
 
@@ -105,7 +106,7 @@
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
-                    <span class="mode-text text">Cambia modo</span>
+                    <span class="mode-text text">Cambiar</span>
 
                     <div class="toggle-switch">
                         <span class="switch"></span>

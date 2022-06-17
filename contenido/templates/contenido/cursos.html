@@ -1,7 +1,7 @@
 {% extends "contenido/encabezado.html"%}
 {%block titulo%} Principal {% endblock %}
 {% load static %}
-
+{%block titulomenu%}Cursos actuales{%endblock%}
 {%block imagen%}
 {%load static%}
 {%static 'contenido/images/cursos.png'%}
@@ -9,10 +9,10 @@
 
 {% block contenido%}
 <section class="home">
-    <div class="text"><h1>Las materias disponibles son: </h1>
+    <div class="text"><h1 style="color:rgb(84, 38, 170);">Los cursos disponibles son: </h1>
     <hr>
 
-    <ul>
+    <ul  style="font-size:2vw;">
         <li>Base de datos</li>
         <li>Programación</li>
         <li>Inglés</li>
