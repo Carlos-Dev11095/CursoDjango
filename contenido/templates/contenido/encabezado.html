@@ -17,10 +17,9 @@
 
     {%load static%}
     <link href="{% static 'contenido/css/style.css'%}" rel="stylesheet" type="text/css">
-    <script src="{% static 'contenido/js/script.js'%}"></script>
     
-    <script src="script.js"></script>
-     
+
+
 </head>
 <body>
     <nav class="sidebar close">
@@ -44,7 +43,7 @@
 
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Buscar...">
                 </li>
 
                 <ul class="menu-links">
@@ -57,19 +56,19 @@
 
                     <li class="nav-link">
                         <a href="{%url 'Cursos'%}">
-                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                            <span class="text nav-text">Revenue</span>
+                            <i class='bx bx-book icon' ></i>
+                            <span class="text nav-text">Materias</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="{%url 'Contacto'%}">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
+                            <i class='bx bx-mail-send icon'></i>
+                            <span class="text nav-text">Formulario</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-pie-chart-alt icon' ></i>
                             <span class="text nav-text">Analytics</span>
@@ -92,27 +91,28 @@
 
                 </ul>
             </div>
-
+            -->
             <div class="bottom-content">
-                <li class="">
+                <!-- <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Logout</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="mode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
-                    <span class="mode-text text">Dark mode</span>
+                    <span class="mode-text text">Cambia modo</span>
 
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
+                    
                 </li>
-                
+    
             </div>
         </div>
 
@@ -125,5 +125,6 @@
 
     
 {% endblock %}
+<script src="{% static 'contenido/js/script.js'%}"></script>
 </body>
 </html>
