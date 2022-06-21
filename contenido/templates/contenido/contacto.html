@@ -11,6 +11,19 @@
 {% block contenido%}
 
 <section class="home">
+    <!-- barra de navegación-->
+	<div class="text">
+		<ul class="breadcrumb">
+			<a href="{%url 'Principal'%}">
+				{% if request.path == '/'%}
+				Principal
+				{%else%}
+				Principal{{request.path}}
+				{%endif%}
+			</a>
+		</ul>
+	</div>
+	<!-- /barra de navegación-->
     <div class="text"><h1 style="color: rgb(84, 38, 170);">Formulario para preguntas.</h1>
     <hr>
     <p sytle="font-size:3vw;">Nombre: <input type="text" name="nombre" class="col-sm-2 col-form-label"></p>
@@ -25,6 +38,7 @@
     <p>Comentarios:</p>
     <p><textarea cols="30" rows="10"></textarea></p>
     <p><input type="Button" name="enviar" value="Enviar" /></p>
+
 </section>
 
 

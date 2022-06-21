@@ -9,9 +9,24 @@
 
 {% block contenido%}
 <section class="home">
+
+    <!-- barra de navegación-->
+	<div class="text">
+		<ul class="breadcrumb">
+			<a href="{%url 'Principal'%}">
+				{% if request.path == '/'%}
+				Principal
+				{%else%}
+				Principal{{request.path}}
+				{%endif%}
+			</a>
+		</ul>
+	</div>
+	<!-- /barra de navegación-->
+
+
     <div class="text"><h1 style="color:rgb(84, 38, 170);">Los cursos disponibles son: </h1>
     <hr>
-
     <ul  style="font-size:2vw;">
         <li>Base de datos</li>
         <li>Programación</li>
