@@ -1,10 +1,7 @@
 from django.contrib import admin
-
-from cursos.models import Cursos
+from cursos.models import cursos
 
 # Register your models here.
-
-class AdministrarModeloCursos(admin.ModelAdmin):
+class AdminCursosModel(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
-
-admin.site.register(Cursos,AdministrarModeloCursos)
+admin.site.register(cursos,AdminCursosModel)

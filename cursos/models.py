@@ -1,12 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class Cursos(models.Model): #Define la estructura de nuestra tabla
-    idcurso = models.SmallIntegerField(primary_key=True,verbose_name="Id del curso") #principal auto
-    nombre = models.TextField(max_length=30,verbose_name="Nombre del curso") #Texto largo limitado
-    descripcion = models.TextField(verbose_name="Características del curso") #Texto largo
-    activo = models.BooleanField(verbose_name="Disponibilidad del curso") #Booleano
-    duracion = models.PositiveSmallIntegerField(verbose_name="Tiempo del curso") #Int pequeño
+class cursos(models.Model): #Define la estructura de nuestra tabla
+    idcurso = models.SmallIntegerField(primary_key=True,verbose_name="Id del curso") #Id generado automaticamente
+    nombre = models.TextField(max_length=30,verbose_name="Nombre del curso") #Campo de texto 
+    descripcion = models.TextField(verbose_name="Características del curso") #Campo de texto
+    activo = models.BooleanField(verbose_name="Disponibilidad del curso") #Campo Booleano
+    duracion = models.PositiveSmallIntegerField(verbose_name="Tiempo del curso en meses") #Int pequeño
     created = models.DateField(auto_now_add=True) 
     updated = models.DateField(auto_now_add=True) 
 
