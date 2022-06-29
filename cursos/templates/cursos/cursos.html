@@ -21,6 +21,7 @@
     <th>Incio de Curso</th>
     <th>Cupos disponibles</th>
     <th>Fin del curso</th>
+    <th>Cometarios</th>
     </tr>
     </thead>
   <tbody>
@@ -32,9 +33,10 @@
       <td class="text-semibold">{{curso.IdCurso}}</td>
       <td class="muted">{{curso.nombreCurso}}</td>
       <td class="muted">{{curso.Descripcion}}</td>
-      <td class="muted">{{curso.created}}</td>
+      <td class="muted">{{curso.FechaInicio}}</td>
       <td class="muted">{{curso.Cupo}}</td>
-      <td class="muted">{{curso.updated}}</td>
+      <td class="muted">{{curso.FechaFinal}}</td>
+      <td class="muted">{{curso.Comentario}}</td>
     </tr>
     {% endfor %}
   </tbody>
