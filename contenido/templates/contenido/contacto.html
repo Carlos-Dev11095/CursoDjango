@@ -9,18 +9,18 @@
 
     
 {% block contenido%}
-    <h1 style="color: rgb(84, 38, 170);">Formulario para preguntas.</h1>
+    <h3 style="color: rgb(84, 38, 170);">Formulario para preguntas.</h3>
     <hr>
-    <p sytle="font-size:3vw;">Nombre: <input type="text" name="nombre" class="col-sm-2 col-form-label"></p>
-    <p sytle="font-size:3vw;">Correo: <input type="email" id="email"></p>
-    <select name="curso" id="curso">
+    <p style="font-size:60%;">Nombre: <input type="text" name="nombre" class="col-sm-2 col-form-label"></p>
+    <p style="font-size:60%;">Correo: <input type="email" id="email"></p>
+    <select name="curso" id="curso" style="font-size:40%;">
     <option value="">Seleccione un curso</option>
     <option value="1">Base de datos</option>
     <option value="2">Programación</option>
     <option value="3">Inglés</option>
     <option value="4">Matemáticas</option>
     </select>
-    <p>Comentarios:</p>
+    <p style="font-size:60%;">Comentarios:</p>
     <p><textarea cols="30" rows="10"></textarea></p>
-    <p><input type="Button" name="enviar" value="Enviar" /></p>
+    <p><input type="Button" name="enviar" value="Enviar" style="font-size:60%;"/></p>
 {%endblock%}
