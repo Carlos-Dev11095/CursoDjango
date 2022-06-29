@@ -1,5 +1,5 @@
 {% extends "contenido/encabezado.html"%}
-{%block titulo%} Principal {% endblock %}
+{%block nombrePestana%}Principal{% endblock %}
 {% load static %}
 
 {%block imagen%}
@@ -9,28 +9,7 @@
 {%block titulomenu%}Inicio{%endblock%}
 
 {% block contenido%}
-<section class="home">
-
-    <!-- barra de navegación-->
-	<div class="text">
-		<ul class="breadcrumb">
-			<a href="{%url 'Principal'%}">
-				{% if request.path == '/'%}
-				Principal
-				{%else%}
-				Principal{{request.path}}
-				{%endif%}
-			</a>
-		</ul>
-	</div>
-	<!-- /barra de navegación-->
-
-    <div class="text"><h1 style="font-size:3vw; color:rgb(84, 38, 170);">Bienvenid@ a Nuestra Página Web</h1>
+		<h1 style="font-size:3vw; color:rgb(84, 38, 170);">Bienvenid@ a Nuestra Página Web</h1>
     <hr>
-<h3>En esta página podrás ver los cursos disponibles para ti,<br> para hacerlo despliega el menú.</h3></div>
-
-
-
-</section>
-
+		<h3>En esta página podrás ver los cursos disponibles para ti,<br> para hacerlo despliega el menú.</h3>
 {%endblock%}
