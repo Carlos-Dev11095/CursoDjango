@@ -11,8 +11,8 @@
       <h3 style="color:rgb(84, 38, 170)">Los cursos disponibles son: </h3>
     <hr>
     <!-- Tabla de cursos -->
-<table class="table table-bordered"border="1">
-  <thead>
+<table class="table table-bordered">
+  <thead class="thead-dark">
   <tr style="font-size:60%;">
     <th>Foto</th>
     <th>ID</th>
@@ -26,8 +26,8 @@
     </thead>
   <tbody>
     {% for curso in cursos %}
-    <tr style="font-size:60%;">
-      <td class="text-center">
+    <tr style="font-size:60%;" class="table-active text">
+      <td class="text-center active">
         <img src="{{curso.imagen.url}}" alt="Curso" class="img-media" width="60" height="60">
       </td>
       <td class="text-semibold">{{curso.IdCurso}}</td>
