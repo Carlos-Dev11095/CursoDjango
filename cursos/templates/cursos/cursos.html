@@ -15,6 +15,7 @@
   <thead>
   <tr>
     <th>Foto</th>
+    <th>ID</th>
     <th>Curso</th>
     <th>Características</th>
     <th>Incio de Curso</th>
@@ -28,10 +29,11 @@
       <td class="text-center">
         <img src="{{curso.imagen.url}}" alt="200px" class="img-media" />
       </td>
-      <td class="text-semibold">{{curso.idcurso}}</td>
-      <td class="muted">{{curso.nombre}}</td>
+      <td class="text-semibold">{{curso.IdCurso}}</td>
+      <td class="muted">{{curso.nombreCurso}}</td>
+      <td class="muted">{{curso.Descripcion}}</td>
       <td class="muted">{{curso.created}}</td>
-      <td class="muted">{{curso.cupo}}</td>
+      <td class="muted">{{curso.Cupo}}</td>
       <td class="muted">{{curso.updated}}</td>
     </tr>
     {% endfor %}
