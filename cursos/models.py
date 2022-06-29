@@ -1,6 +1,6 @@
 from django.db import models
 # Create your models here.
-class cursos(models.Model): #Define la estructura de nuestra tabla
+class Cursos(models.Model): #Define la estructura de nuestra tabla
     idcurso = models.SmallIntegerField(primary_key=True,verbose_name="Id del curso") #Id generado automaticamente
     nombre = models.TextField(max_length=30,verbose_name="Nombre del curso") #Campo de texto 
     descripcion = models.TextField(verbose_name="Características del curso") #Campo de texto
