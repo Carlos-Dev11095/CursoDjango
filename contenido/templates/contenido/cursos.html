@@ -10,10 +10,27 @@
 {% block contenido%}
       <h1 style="color:rgb(84, 38, 170);">Los cursos disponibles son: </h1>
     <hr>
-    <ul  style="font-size:2vw;">
-        <li>Base de datos</li>
-        <li>Programación</li>
-        <li>Inglés</li>
-        <li>Matemáticas</li>
-    </ul>
+    <!-- Tabla de Alumnos -->
+<table class="table table-bordered"border="1">
+  <thead>
+  <tr>
+  <th>Foto</th>
+  <th>Curso</th>
+  <th>Características</th>
+  <th>Disponibilidad del curso</th>
+  <th>Cupos disponibles</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td class="text-center">
+    <img src="" alt="" class="img-media">
+    </td>
+    <td class="text-semibold">Dw</td>
+    <td class="muted">nola</td>
+    <td class="muted">Tic</td>
+    <td class="muted">Matutino</td>
+    </tr>
+    </tbody>
+    </table>
 {%endblock%}
