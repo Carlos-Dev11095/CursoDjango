@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class cursosconfig(AppConfig):
+class CursosConfig(AppConfig):
     name = 'cursos'
-    verbose_name='convocatorias'
+    verbose_name='Convocatorias'
