@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Cursos(models.Model): #Define la estructura de nuestra tabla
@@ -22,3 +23,17 @@ class Cursos(models.Model): #Define la estructura de nuestra tabla
     def __str__(self):
         return self.nombreCurso
         #Mostrado por nombre
+        
+class Actividad(models.Model):
+    IdActividad= models.SmallIntegerField(primary_key=True,verbose_name="Id Actividad")
+    NombreActividad= models.TextField(max_length=30,verbose_name="Nombre de la Actividad")
+    ComentActividad = RichTextField(verbose_name="Comentario de la Actividad")
+    created = models.DateField(auto_now_add=True) 
+    
+    class Meta:
+        verbose_name = "actividad"
+        verbose_name_plural = "actividades"
+        ordering = ["-created"]
+    
+    def __str__(self):
+        return self.NombreActividad

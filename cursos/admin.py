@@ -1,5 +1,6 @@
 from django.contrib import admin
 from cursos.models import Cursos
+from cursos.models import Actividad
 
 # Register your models here.
 
@@ -12,3 +13,10 @@ class AdministrarModeloCursos(admin.ModelAdmin):
 
 admin.site.register(Cursos,AdministrarModeloCursos)
 
+class AdminActividades(admin.ModelAdmin):
+    list_display = ('IdActividad', 'NombreActividad')
+    search_fields = ('IdActividad', 'ComentActividad')
+    date_hierarchy = 'created'
+    readonly_fields = ('created','IdActividad')
+
+admin.site.register(Actividad,AdminActividades)
