@@ -28,7 +28,7 @@ class Actividad(models.Model):
     IdActividad= models.SmallIntegerField(primary_key=True,verbose_name="Id Actividad")
     NombreActividad= models.TextField(max_length=30,verbose_name="Nombre de la Actividad")
     ComentActividad = RichTextField(verbose_name="Comentario de la Actividad")
-    created = models.DateField(auto_now_add=True,verbose_name="Creado el: ") 
+    created = models.DateField(auto_now_add=True,verbose_name="Creado el") 
     
     class Meta:
         verbose_name = "actividad"
