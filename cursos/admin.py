@@ -14,8 +14,8 @@ class AdministrarModeloCursos(admin.ModelAdmin):
 admin.site.register(Cursos,AdministrarModeloCursos)
 
 class AdminActividades(admin.ModelAdmin):
-    list_display = ('IdActividad', 'NombreActividad')
-    search_fields = ('IdActividad', 'ComentActividad')
+    list_display = ('IdActividad', 'NombreActividad','ComentActividad','created')
+    search_fields = ('IdActividad', 'ComentActividad','ComentActividad','created')
     date_hierarchy = 'created'
     readonly_fields = ('created','IdActividad')
 
