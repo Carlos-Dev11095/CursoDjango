@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cursos.models import Cursos
+from cursos.models import ComentarioContacto, Cursos
 from cursos.models import Actividad
 
 # Register your models here.
@@ -20,3 +20,10 @@ class AdminActividades(admin.ModelAdmin):
     readonly_fields = ('created','IdActividad')
 
 admin.site.register(Actividad,AdminActividades)
+
+class AdministrarComentariosContactos(admin.ModelAdmin):
+    list_display = ('id', 'mensaje')
+    search_fields = ('id', 'mensaje')
+    date_hierarchy = 'created'
+    readondly_fields = ('created','id')
+admin.site.register(ComentarioContacto,AdministrarComentariosContactos)

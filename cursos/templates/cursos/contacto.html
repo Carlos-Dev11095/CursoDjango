@@ -1,0 +1,29 @@
+{% extends "contenido/encabezado.html"%}
+{%block nombrePestana%}Contacto{% endblock %}
+{% load static %}
+{%block titulomenu%}Contacto{%endblock%}
+{%block imagen%}
+{%load static%}
+{%static 'contenido/images/form.png'%}
+{% endblock %}
+
+    
+{% block contenido%}
+<form class="form-horizontal" action="{%url 'Registrar'%}" method="POST" role="form">
+    {% csrf_token %}
+    <h3 style="color: rgb(84, 38, 170);">Formulario para preguntas.</h3>
+    <hr>
+    <p style="font-size:60%;" name="usuario">Nombre: <input type="text" name="nombre" class="col-sm-2 col-form-label"></p>
+    <p style="font-size:60%;"name="correo">Correo: <input type="email" id="email"></p>
+    <select name="curso" id="cursos" style="font-size:40%;">
+    <option value="">Seleccione un curso</option>
+    <option value="1">Base de datos</option>
+    <option value="2">Programación</option>
+    <option value="3">Inglés</option>
+    <option value="4">Matemáticas</option>
+    </select>
+    <p style="font-size:60%; " name="mensaje">Comentarios:</p>
+    <p><textarea cols="30" rows="10"></textarea></p>
+    <p><input type="submit" name="enviar" value="Enviar" style="font-size:60%;"/></p>
+    </form>
+{%endblock%}

@@ -37,3 +37,20 @@ class Actividad(models.Model):
     
     def __str__(self):
         return self.NombreActividad
+
+class ComentarioContacto(models.Model):
+    id = models.AutoField(primary_key=True,verbose_name="Clave")
+    usuario = models.TextField(verbose_name="nombre")
+    correo = models.TextField(verbose_name="correo")
+    cursos = models.TextField(verbose_name="cursos")
+    mensaje= models.TextField(verbose_name="comentario")
+    created = models.DateTimeField(auto_now_add=True,verbose_name="Registrado")
+
+    class Meta:
+        verbose_name = "Comentario Contacto"
+        verbose_name_plural = "Comentarios Contactos"
+        ordering = ["-created"]
+        #El - indica que se ordena del más reciente al mas viejo
+    
+    def __str__(self):
+        return self.mensaje	
