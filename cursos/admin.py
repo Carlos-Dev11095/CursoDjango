@@ -10,6 +10,9 @@ class AdministrarModeloCursos(admin.ModelAdmin):
     search_fields = ('IdCurso','nombreCurso','Cupo','FechaInicio','FechaFinal','Comentario')
     date_hierarchy = 'created'
     list_filter = ('nombreCurso','Cupo')
+    list_per_page = 2
+    list_display_links = ('IdCurso', 'nombreCurso')
+    list_editable =('Cupo', 'Comentario')
 
 admin.site.register(Cursos,AdministrarModeloCursos)
 
